@@ -11,5 +11,6 @@
  * ```
  */
 export function add(firstNumber: number, secondNumber: number) {
+  console.log('hola');
   return firstNumber + secondNumber;
 }
