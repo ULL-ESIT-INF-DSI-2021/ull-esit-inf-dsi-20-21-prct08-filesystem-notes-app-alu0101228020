@@ -1,6 +1,9 @@
 {
     "entryPoints": [
-      "./src/index.ts"
+      "./src/modificacion/comision.ts",
+      "./src/modificacion/mastercardPay.ts",
+      "./src/modificacion/paypalPay.ts",
+      "./src/modificacion/visaPay.ts"
     ],
     "out": "./docs"
 }
