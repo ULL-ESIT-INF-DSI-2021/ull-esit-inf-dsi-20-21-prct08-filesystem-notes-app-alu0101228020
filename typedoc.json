@@ -3,7 +3,10 @@
       "./src/modificacion/comision.ts",
       "./src/modificacion/mastercardPay.ts",
       "./src/modificacion/paypalPay.ts",
-      "./src/modificacion/visaPay.ts"
+      "./src/modificacion/visaPay.ts",
+
+      "./src/notes/app.ts",
+      "./src/notes/notes.ts"
     ],
     "out": "./docs"
 }
