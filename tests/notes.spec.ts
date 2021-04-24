@@ -17,15 +17,15 @@ describe('Ejercicio - Aplicación de procesamiento de notas de texto', () => {
 
     describe('add function test', () => {
       it('notes.addNote() returns New note added! with title: Primera nota', () => {
-        expect(notes.addNote('Test', 'Primera nota', 'Esta es una prueba para comprobar su funcionamiento', colours.yellow)).to.be.equal('New note added! with title: Primera nota');
+        expect(notes.addNote('Test', 'Primera nota', 'Esta es una prueba para comprobar su funcionamiento', colours.yellow)).to.be.equal('New note added! with title: Primera nota\nNote: If you do not choose between the colors: blue, red, green and yellow. Yellow is set by default.');
       });
 
       it('notes.addNote() returns New note added! with title: Segunda nota', () => {
-        expect(notes.addNote('Test', 'Segunda nota', 'Esta es una prueba para comprobar su funcionamiento', colours.yellow)).to.be.equal('New note added! with title: Segunda nota');
+        expect(notes.addNote('Test', 'Segunda nota', 'Esta es una prueba para comprobar su funcionamiento', colours.yellow)).to.be.equal('New note added! with title: Segunda nota\nNote: If you do not choose between the colors: blue, red, green and yellow. Yellow is set by default.');
       });
 
       it('notes.addNote() returns New note added! with title: Tercera nota', () => {
-        expect(notes.addNote('Test', 'Tercera nota', 'Esta es una prueba para comprobar su funcionamiento', colours.yellow)).to.be.equal('New note added! with title: Tercera nota');
+        expect(notes.addNote('Test', 'Tercera nota', 'Esta es una prueba para comprobar su funcionamiento', colours.yellow)).to.be.equal('New note added! with title: Tercera nota\nNote: If you do not choose between the colors: blue, red, green and yellow. Yellow is set by default.');
       });
 
       it('notes.addNote() returns Error: Note title taken!', () => {
@@ -35,7 +35,7 @@ describe('Ejercicio - Aplicación de procesamiento de notas de texto', () => {
 
     describe('modidy function test', () => {
       it('notes.modifyNote() returns Modified note! with title: Primera nota', () => {
-        expect(notes.modifyNote('Test', 'Primera nota', 'Esta es una prueba', colours.yellow)).to.be.equal('Modified note! with title: Primera nota');
+        expect(notes.modifyNote('Test', 'Primera nota', 'Esta es una prueba', colours.yellow)).to.be.equal('Modified note! with title: Primera nota\nNote: If you do not choose between the colors: blue, red, green and yellow. Yellow is set by default.');
       });
 
       it('notes.addNote() returns Error: Title does not exist!', () => {
