@@ -1,7 +1,7 @@
 import 'mocha';
 import {expect} from 'chai';
 import * as fs from 'fs';
-import {Notes, color} from '../src/notes/notes';
+import {Notes, colours} from '../src/notes/notes';
 
 describe('Ejercicio - Aplicación de procesamiento de notas de texto', () => {
   const notes : Notes = Notes.getNotes();
@@ -17,33 +17,33 @@ describe('Ejercicio - Aplicación de procesamiento de notas de texto', () => {
 
     describe('add function test', () => {
       it('notes.addNote() returns New note added! with title: Primera nota', () => {
-        expect(notes.addNote('Test', 'Primera nota', 'Esta es una prueba para comprobar su funcionamiento', color.yellow)).to.be.equal('New note added! with title: Primera nota');
+        expect(notes.addNote('Test', 'Primera nota', 'Esta es una prueba para comprobar su funcionamiento', colours.yellow)).to.be.equal('New note added! with title: Primera nota');
       });
 
       it('notes.addNote() returns New note added! with title: Segunda nota', () => {
-        expect(notes.addNote('Test', 'Segunda nota', 'Esta es una prueba para comprobar su funcionamiento', color.yellow)).to.be.equal('New note added! with title: Segunda nota');
+        expect(notes.addNote('Test', 'Segunda nota', 'Esta es una prueba para comprobar su funcionamiento', colours.yellow)).to.be.equal('New note added! with title: Segunda nota');
       });
 
       it('notes.addNote() returns New note added! with title: Tercera nota', () => {
-        expect(notes.addNote('Test', 'Tercera nota', 'Esta es una prueba para comprobar su funcionamiento', color.yellow)).to.be.equal('New note added! with title: Tercera nota');
+        expect(notes.addNote('Test', 'Tercera nota', 'Esta es una prueba para comprobar su funcionamiento', colours.yellow)).to.be.equal('New note added! with title: Tercera nota');
       });
 
       it('notes.addNote() returns Error: Note title taken!', () => {
-        expect(notes.addNote('Test', 'Primera nota', 'Esta es una prueba para comprobar su funcionamiento', color.yellow)).to.be.equal('Error: Note title taken!');
+        expect(notes.addNote('Test', 'Primera nota', 'Esta es una prueba para comprobar su funcionamiento', colours.yellow)).to.be.equal('Error: Note title taken!');
       });
     });
 
     describe('modidy function test', () => {
       it('notes.modifyNote() returns Modified note! with title: Primera nota', () => {
-        expect(notes.modifyNote('Test', 'Primera nota', 'Esta es una prueba', color.yellow)).to.be.equal('Modified note! with title: Primera nota');
+        expect(notes.modifyNote('Test', 'Primera nota', 'Esta es una prueba', colours.yellow)).to.be.equal('Modified note! with title: Primera nota');
       });
 
       it('notes.addNote() returns Error: Title does not exist!', () => {
-        expect(notes.modifyNote('Test', 'Primera', 'Esta es una prueba para comprobar su funcionamiento', color.yellow)).to.be.equal('Error: Title does not exist!');
+        expect(notes.modifyNote('Test', 'Primera', 'Esta es una prueba para comprobar su funcionamiento', colours.yellow)).to.be.equal('Error: Title does not exist!');
       });
 
       it('notes.addNote() returns Error: User not found!', () => {
-        expect(notes.modifyNote('Test2', 'Segunda nota', 'Esta es una prueba para comprobar su funcionamiento', color.yellow)).to.be.equal('Error: User not found!');
+        expect(notes.modifyNote('Test2', 'Segunda nota', 'Esta es una prueba para comprobar su funcionamiento', colours.yellow)).to.be.equal('Error: User not found!');
       });
     });
 

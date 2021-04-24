@@ -1,5 +1,5 @@
 import * as yargs from 'yargs';
-import {Notes, color} from './notes';
+import {Notes, colours} from './notes';
 
 const notes : Notes = Notes.getNotes();
 
@@ -25,21 +25,21 @@ yargs.command({
       demandOption: true,
       type: 'string',
     },
-    color: {
+    colour: {
       describe: 'Note Color',
       demandOption: true,
       type: 'string',
     },
   },
   handler(argv) {
-    if (typeof argv.user === 'string' && typeof argv.title === 'string' && typeof argv.body === 'string' && typeof argv.color === 'string') {
-      let colors: color = color.blue;
-      Object.values(color).forEach((value) => {
-        if (argv.color == value) {
-          colors = value;
+    let colourNote: colours = colours.blue;
+    if (typeof argv.title === 'string' && typeof argv.body === 'string' && typeof argv.colour === 'string' && typeof argv.user === 'string') {
+      Object.values(colours).forEach((value) => {
+        if (argv.colour == value) {
+          colourNote = value;
         }
       });
-      notes.addNote(argv.user, argv.title, argv.body, colors);
+      notes.addNote(argv.user, argv.title, argv.body, colourNote);
     }
   },
 });
@@ -66,21 +66,21 @@ yargs.command({
       demandOption: true,
       type: 'string',
     },
-    color: {
+    colour: {
       describe: 'Note Color',
       demandOption: true,
       type: 'string',
     },
   },
   handler(argv) {
-    if (typeof argv.user === 'string' && typeof argv.title === 'string' && typeof argv.body === 'string' && typeof argv.color === 'string') {
-      let colors: color = color.blue;
-      Object.values(color).forEach((value) => {
-        if (argv.color == value) {
-          colors = value;
+    if (typeof argv.user === 'string' && typeof argv.title === 'string' && typeof argv.body === 'string' && typeof argv.colour === 'string') {
+      let colour: colours = colours.blue;
+      Object.values(colours).forEach((value) => {
+        if (argv.colour == value) {
+          colour = value;
         }
       });
-      notes.modifyNote(argv.user, argv.title, argv.body, colors);
+      notes.modifyNote(argv.user, argv.title, argv.body, colour);
     }
   },
 });

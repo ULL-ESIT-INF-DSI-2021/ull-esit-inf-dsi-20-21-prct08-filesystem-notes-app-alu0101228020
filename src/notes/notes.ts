@@ -4,7 +4,7 @@ import * as chalk from 'chalk';
 /**
  * Enum data type that has the different colors of the notes
  */
-export enum color { red = 'red', green = 'green', blue = 'blue', yellow = 'yellow' };
+export enum colours { red = 'red', green = 'green', blue = 'blue', yellow = 'yellow' }
 
 export class Notes {
   /**
@@ -24,7 +24,7 @@ export class Notes {
     if (!Notes.notes) Notes.notes = new Notes();
 
     return Notes.notes;
-  };
+  }
 
   /**
    * Public method that allows adding a note with a JSON structure of a specific user
@@ -34,9 +34,9 @@ export class Notes {
    * @param color Note color
    * @returns An informative chain
    */
-  addNote(name: string, title: string, body: string, color: color): string {
+  addNote(name: string, title: string, body: string, colour: colours): string {
     // Structure of the JSON of each user
-    const structure = `{ "title": "${title}", "body": "${body}" , "color": "${color}" }`;
+    const structure = `{ "title": "${title}", "body": "${body}" , "colour": "${colour}" }`;
 
     // Create the filename with the title along
     const titleTogether = title.split(' ').join('');
@@ -71,9 +71,9 @@ export class Notes {
    * @param color Note color
    * @returns An informative chain
    */
-  modifyNote(name: string, title: string, body: string, color: color): string {
+  modifyNote(name: string, title: string, body: string, colour: colours): string {
     // Structure of the JSON of each user
-    const structure = `{ "title": "${title}", "body": "${body}" , "color": "${color}" }`;
+    const structure = `{ "title": "${title}", "body": "${body}" , "colour": "${colour}" }`;
 
     // Create the filename with the title along
     const titleTogether = title.split(' ').join('');
@@ -143,7 +143,7 @@ export class Notes {
         // The file is read and that structure is stored
         const data = fs.readFileSync(`./database/${name}/${note}`);
         const dataJSON = JSON.parse(data.toString());
-        console.log(chalk.keyword(dataJSON.color)(`- ${dataJSON.title}` + '\n'));
+        console.log(chalk.keyword(dataJSON.colour)(`- ${dataJSON.title}` + '\n'));
         aux = aux + `- ${dataJSON.title}` + '\n';
       });
       return aux;
@@ -169,7 +169,7 @@ export class Notes {
         // The file is read and that structure is stored
         const data = fs.readFileSync(`./database/${name}/${titleTogether}.json`);
         const dataJSON = JSON.parse(data.toString());
-        console.log(chalk.keyword(dataJSON.color)(`- Title: ${dataJSON.title} ` + `- Body: ${dataJSON.body}`));
+        console.log(chalk.keyword(dataJSON.colour)(`- Title: ${dataJSON.title} ` + `- Body: ${dataJSON.body}`));
         return `- Title: ${dataJSON.title} ` + `- Body: ${dataJSON.body}`;
         // If the note with that title does not exist, shows the error message
       } else {
