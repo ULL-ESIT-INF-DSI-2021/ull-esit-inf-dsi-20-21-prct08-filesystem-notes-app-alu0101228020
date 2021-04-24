@@ -87,4 +87,5 @@ describe('Ejercicio - Aplicación de procesamiento de notas de texto', () => {
   });
 });
 
+
 fs.rmdirSync('./database', {recursive: true});
