@@ -550,3 +550,23 @@ describe('Ejercicio - Aplicación de procesamiento de notas de texto', () => {
 
 fs.rmdirSync('./database', {recursive: true});
 ```
+
+### 5. Conclusiones
+
+En conclusión, en esta práctica podemos destacar el uso del paquete **yargs** que nos permite parsear diferentes argumentos pasados a un programa desde la línea de comandos y de esta forma, interactuar con el usuario, proporcionándole todas aquellas acciones necesarias que requiera una aplicación de procesamiento de notas de texto. El proceso de aprendizaje ha sido bastante rápido ya que se entendió fácilmente la estructura de un comando a través del **yargs**.
+
+Por otro lado, el uso del **API síncrona proporcionada por Node.js para trabajar con el sistema de ficheros** fue bastante intuitiva sus funciones sobre ficheros y podemos destacar, la gran diversidad de funciones que proporciona.
+
+Finalmente, me gustaría destacar el uso del paquete **chalk** que, fue también intuitivo y fácil de utilizar para realizar utilidades básicas del mismo y de esta forma representar por colores aquellos mensajes al usuario por consola mejorando la interacción y percepción de la información.
+
+### 6. Bibliografía
+
+[Guión Práctica 8](https://ull-esit-inf-dsi-2021.github.io/prct08-filesystem-notes-app/)
+
+[Asignación de GitHub Classroom](https://classroom.github.com/assignment-invitations/906f18610f5e4a289890edf2c0ceb0f4/status)
+
+[Documentación sobre Yargs](https://www.npmjs.com/package/yargs) 
+
+[Documentación sobre Chalk](https://www.npmjs.com/package/chalk)
+
+[Documentación sobre API síncrona proporcionada por Node.js para trabajar con el sistema de ficheros](https://nodejs.org/dist/latest-v15.x/docs/api/fs.html#fs_synchronous_api)
